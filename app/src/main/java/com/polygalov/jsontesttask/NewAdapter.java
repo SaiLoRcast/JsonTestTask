@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +18,6 @@ public class NewAdapter extends RecyclerView.Adapter<NewAdapter.NewViewHolder> {
     private Context mContext;
 
     private List<ApiObject> mApiObjectList;
-    private List<String> names;
 
     public NewAdapter(Context context, List<ApiObject> apiObjectList) {
         mContext = context;
@@ -37,6 +36,10 @@ public class NewAdapter extends RecyclerView.Adapter<NewAdapter.NewViewHolder> {
         final ApiObject apiObject = mApiObjectList.get(position);
         holder.name.setText(apiObject.getFirstName());
         holder.description.setText(apiObject.getDescription());
+
+        for (int i = 1; i < mApiObjectList.size(); i++) {
+            holder.number.setText(Integer.toString(position + 1));
+        }
 
         holder.item.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,15 +67,17 @@ public class NewAdapter extends RecyclerView.Adapter<NewAdapter.NewViewHolder> {
 
     public class NewViewHolder extends RecyclerView.ViewHolder {
 
+        public TextView number;
         public TextView name;
         public TextView description;
-        public LinearLayout item;
+        public RelativeLayout item;
 
         public NewViewHolder(View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.name);
             description = itemView.findViewById(R.id.description);
             item = itemView.findViewById(R.id.item);
+            number = itemView.findViewById(R.id.number);
         }
     }
 }

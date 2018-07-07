@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import java.util.List;
@@ -20,9 +21,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private RecyclerView mRecyclerView;
     NewAdapter adapter;
+    LinearLayoutManager linearLayoutManager;
 
     private Button showList;
     private Button deleteList;
+
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +35,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mRecyclerView = findViewById(R.id.recycler);
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(linearLayoutManager);
-        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setHasFixedSize(false);
 
         showList = findViewById(R.id.button_show_list);
         showList.setOnClickListener(this);
@@ -50,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     List<ApiObject> postList = response.body();
                     adapter = new NewAdapter(getApplicationContext(), postList);
                     mRecyclerView.setAdapter(adapter);
+
                 }
             }
 
@@ -77,4 +82,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+
+
 }
