@@ -1,4 +1,4 @@
-package com.polygalov.jsontesttask;
+package com.polygalov.jsontesttask.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,10 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.polygalov.jsontesttask.R;
+import com.polygalov.jsontesttask.activity.DetailsActivity;
+import com.polygalov.jsontesttask.api.ApiObject;
 
 import java.util.List;
 

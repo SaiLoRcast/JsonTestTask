@@ -1,4 +1,4 @@
-package com.polygalov.jsontesttask;
+package com.polygalov.jsontesttask.api;
 
 import com.google.gson.annotations.SerializedName;
 

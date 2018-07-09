@@ -1,8 +1,10 @@
-package com.polygalov.jsontesttask;
+package com.polygalov.jsontesttask.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import com.polygalov.jsontesttask.R;
 
 public class DetailsActivity extends AppCompatActivity {
 

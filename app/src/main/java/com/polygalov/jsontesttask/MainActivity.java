@@ -9,6 +9,10 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.polygalov.jsontesttask.adapter.NewAdapter;
+import com.polygalov.jsontesttask.api.ApiObject;
+import com.polygalov.jsontesttask.api.ApiUtil;
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -66,8 +70,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
-
-
 
     @Override
     public void onClick(View view) {
