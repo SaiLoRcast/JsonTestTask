@@ -2,13 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:padding="16dp"
     android:layout_margin="8dp"
-    android:id="@+id/item_antrance"
+    android:orientation="horizontal"
     android:background="@android:color/darker_gray"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/entrance_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/entrance_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/entrance_comment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.DetailsActivity" />
-        <activity android:name=".EntranceActivity"></activity>
+        <activity android:name=".EntranceActivity" />
+        <activity android:name=".activity.AdvertizeActivity"></activity>
     </application>
 
 </manifest>
