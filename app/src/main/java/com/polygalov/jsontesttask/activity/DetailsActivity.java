@@ -18,9 +18,9 @@ public class DetailsActivity extends AppCompatActivity {
 
     private void getIncomingIntent(){
 
-        if (getIntent().hasExtra("name") && getIntent().hasExtra("description")) {
+        if (getIntent().hasExtra("address") && getIntent().hasExtra("description")) {
 
-            String name = getIntent().getStringExtra("name");
+            String name = getIntent().getStringExtra("address");
             String descriptipn = getIntent().getStringExtra("description");
 
             setTexts(descriptipn, name);
