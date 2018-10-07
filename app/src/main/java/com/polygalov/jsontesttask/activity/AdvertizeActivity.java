@@ -35,6 +35,8 @@ public class AdvertizeActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(false);
 
         getEntrancesFA();
+        mAdapter = new AdvertizeAdapter(getApplicationContext(), mAdvertizeList);
+        mRecyclerView.setAdapter(mAdapter);
     }
 
     public void getEntrancesFA() {
@@ -45,7 +47,8 @@ public class AdvertizeActivity extends AppCompatActivity {
 
         mAdvertizeList = new ArrayList<>();
         mAdvertizeList = (List<Advertize>) intent.getSerializableExtra("advertizes");
-        mRecyclerView.setAdapter(new AdvertizeAdapter(getApplicationContext(), mAdvertizeList));
+
 
     }
+
 }
